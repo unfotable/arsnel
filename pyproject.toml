@@ -114,6 +114,13 @@ disallow_untyped_decorators = false
 disallow_subclassing_any = false
 warn_unused_ignores = false
 
+[[tool.mypy.overrides]]
+# matplotlib's type stubs differ between releases (polar axes, date locators), so
+# the chart scripts opt out of the checks that flip from one version to the next.
+module = ["charts.*"]
+disable_error_code = ["attr-defined", "arg-type", "no-untyped-call"]
+warn_unused_ignores = false
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["."]

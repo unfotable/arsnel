@@ -64,4 +64,5 @@ print(Square(3).area())
 try:
     Shape()  # type: ignore[abstract]
 except TypeError as exc:
-    print("TypeError:", exc)
+    # Wording after "Shape" varies by Python version; print the stable part.
+    print("TypeError:", str(exc).split(" with")[0])

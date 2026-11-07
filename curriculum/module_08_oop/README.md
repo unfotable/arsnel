@@ -376,7 +376,8 @@ print(Square(3).area())
 try:
     Shape()  # type: ignore[abstract]
 except TypeError as exc:
-    print("TypeError:", exc)
+    # Wording after "Shape" varies by Python version; print the stable part.
+    print("TypeError:", str(exc).split(" with")[0])
 ```
 
 Output:
@@ -387,7 +388,7 @@ Version(major=1, minor=2) True True
 Team(name='core', members=['ada'])
 () ()
 9
-TypeError: Can't instantiate abstract class Shape without an implementation for abstract method 'area'
+TypeError: Can't instantiate abstract class Shape
 ```
 
 ## > exercises
