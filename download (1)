@@ -1,0 +1,38 @@
+# build output (regenerate with `make site`)
+site/
+build/
+dist/
+*.egg-info/
+# environments and caches
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+# local scratch
+.scratch/
+.DS_Store
+# NOTE: .arsnel/ (progress state) is deliberately tracked so CI can commit it.
+
+# secrets and API credentials - never commit these
+.env
+.env.*
+!.env.example
+*.env
+secrets/
+secrets.*
+*.secret
+*.key
+*.pem
+*.p12
+*.pfx
+credentials.json
+service-account*.json
+token.json
+.netrc
+api_keys.*
+*_api_key*
+config.local.*

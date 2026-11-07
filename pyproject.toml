@@ -1,0 +1,120 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "arsnel"
+version = "1.0.0"
+description = "ARSNEL — Learn Python. From print() to production. One pixel at a time."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "ARSNEL contributors" }]
+keywords = ["python", "learning", "tutorial", "curriculum", "pixel-art"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Education",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Education",
+]
+# Core toolchain: curriculum scripts, the quiz engine, charts and the site builder.
+dependencies = [
+    "jinja2>=3.1",
+    "markdown>=3.5",
+    "matplotlib>=3.8",
+]
+
+[project.optional-dependencies]
+data = ["numpy>=1.26", "pandas>=2.1", "plotly>=5.18"]
+web = ["fastapi>=0.110", "httpx>=0.27", "uvicorn>=0.27"]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.4",
+    "black>=24.3",
+    "mypy>=1.9",
+    "types-Markdown",
+]
+all = ["arsnel[data,web,dev]"]
+
+[project.scripts]
+arsnel-progress = "arsnel.progress_core:main"
+
+[project.urls]
+Homepage = "https://github.com/your-org/ARSNEL"
+
+[tool.setuptools.packages.find]
+include = ["arsnel*", "content*"]
+
+# --------------------------------------------------------------------------- #
+# Tooling
+# --------------------------------------------------------------------------- #
+[tool.black]
+line-length = 88
+target-version = ["py311"]
+extend-exclude = "(^/site/|^/assets/)"
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+src = ["."]
+extend-exclude = ["site", "assets"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM", "C4"]
+
+[tool.ruff.lint.flake8-bugbear]
+extend-immutable-calls = ["fastapi.Depends"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["arsnel", "content"]
+
+[tool.ruff.lint.per-file-ignores]
+# Scripts that bootstrap sys.path so they run straight after `git clone`.
+"charts/*" = ["E402"]
+"curriculum/**/quiz.py" = ["E402"]
+# Authoring data contains long prose strings.
+"content/*" = ["E501"]
+"build_readme.py" = ["E501"]
+"arsnel/templates.py" = ["E501"]
+"arsnel/theme.py" = ["E501"]
+# Stubs keep imports/arguments the learner will need later.
+"curriculum/**/exercises/*" = ["F401", "F841", "B007"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+mypy_path = "."
+explicit_package_bases = true
+namespace_packages = true
+ignore_missing_imports = true
+exclude = ["^site/", "^build/"]
+
+[[tool.mypy.overrides]]
+# Teaching code deliberately shows loosely typed third-party calls.
+module = ["curriculum.*"]
+disallow_any_generics = false
+disallow_untyped_calls = false
+warn_return_any = false
+disallow_any_unimported = false
+
+[[tool.mypy.overrides]]
+# Third-party decorators (pytest, fastapi) are typed in CI but may resolve to Any.
+module = [
+    "curriculum.module_12_testing.*",
+    "curriculum.module_15_data_viz.*",
+    "curriculum.module_16_web.*",
+    "curriculum.module_18_capstones.*",
+    "tests.*",
+]
+disallow_untyped_decorators = false
+disallow_subclassing_any = false
+warn_unused_ignores = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q"

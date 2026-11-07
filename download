@@ -1,0 +1,6 @@
+# Keep GitHub Linguist honest: generated output is not "source".
+assets/** linguist-generated=true
+site/** linguist-generated=true
+.arsnel/** linguist-generated=true
+*.md linguist-documentation
+curriculum/**/README.md linguist-generated=true
