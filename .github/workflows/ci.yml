@@ -1,0 +1,69 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+          cache: pip
+      - run: pip install -e ".[all]"
+      - name: ruff
+        run: ruff check .
+      - name: black
+        run: black --check .
+      - name: mypy
+        run: mypy arsnel content charts curriculum tests build_readme.py build_site.py progress.py generate.py bootstrap.py
+      - name: generated files are up to date
+        run: python generate.py --check
+      - name: pytest
+        run: pytest
+      - name: build site
+        run: python build_site.py
+      - uses: actions/upload-artifact@v4
+        if: matrix.python == '3.12'
+        with:
+          name: site
+          path: site
+
+  progress:
+    # Re-scan exercises, redraw charts + README, commit the result (push to main only).
+    needs: quality
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -e ".[all]"
+      - run: python progress.py
+      - name: commit progress
+        run: |
+          git config user.name "arsnel-bot"
+          git config user.email "arsnel-bot@users.noreply.github.com"
+          git add README.md assets .arsnel
+          if git diff --cached --quiet; then
+            echo "nothing to commit"
+          else
+            git commit -m "chore: update progress [skip ci]"
+            git push
+          fi

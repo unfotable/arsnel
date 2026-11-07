@@ -16,7 +16,8 @@ from arsnel.progress_core import Snapshot
 
 def test_readme_has_required_sections() -> None:
     text = build_readme.render(Snapshot(timestamp="t"))
-    assert text.count("ARSNEL") >= 5
+    assert '<h1 align="center">ARSNEL</h1>' in text
+    assert text.count("ARSNEL") >= 4
     assert "██" in text
     for heading in ("xp_status", "why_arsnel", "quickstart", "curriculum", "charts"):
         assert heading in text

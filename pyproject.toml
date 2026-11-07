@@ -44,7 +44,7 @@ all = ["arsnel[data,web,dev]"]
 arsnel-progress = "arsnel.progress_core:main"
 
 [project.urls]
-Homepage = "https://github.com/your-org/ARSNEL"
+Homepage = "https://github.com/unfotable/arsnel"
 
 [tool.setuptools.packages.find]
 include = ["arsnel*", "content*"]
