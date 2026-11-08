@@ -42,17 +42,32 @@ XP 0/970   exercises 0/59   quizzes 0/19   badges 0/16
 
 ## $ quickstart
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/unfotable/arsnel)
+
+No install needed: Codespaces opens ARSNEL in your browser with Python and every dependency ready. Or set it up locally:
+
 ```bash
 git clone https://github.com/unfotable/arsnel && cd arsnel
 python bootstrap.py              # venv + deps + generated files (or: make setup)
 source .venv/bin/activate        # Windows: .venv\Scripts\activate
+
+python -m arsnel                 # where am I? what is next?
+python -m arsnel next            # your next exercise, with the lesson to read first
+python -m arsnel check 1         # grade module 01 (FAIL until you solve the TODO)
+python -m arsnel quiz 1          # take the module quiz
+python progress.py               # update XP bar, charts and README
+```
+
+Prefer plain files? Every piece also runs on its own:
+
+```bash
 cd curriculum/module_01_syntax
 python examples/hello_world.py
 python exercises/ex_01_greeting.py   # FAIL until you solve the TODO
 python quiz.py
-make progress                    # update XP bar, charts and README
-make site && python -m http.server -d site 8000
 ```
+
+Build the website with `make site && python -m http.server -d site 8000`.
 
 ## > curriculum
 

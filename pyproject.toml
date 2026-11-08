@@ -41,6 +41,7 @@ dev = [
 all = ["arsnel[data,web,dev]"]
 
 [project.scripts]
+arsnel = "arsnel.cli:main"
 arsnel-progress = "arsnel.progress_core:main"
 
 [project.urls]

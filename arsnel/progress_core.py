@@ -131,8 +131,8 @@ def discover(root: Path = CURRICULUM) -> dict[int, list[Path]]:
     return found
 
 
-def run_exercise(path: Path, timeout: float = 30.0) -> bool:
-    """Run one exercise file; ``True`` when it exits 0."""
+def run_exercise_detail(path: Path, timeout: float = 30.0) -> tuple[bool, str]:
+    """Run one exercise; return ``(passed, last line of its output)``."""
     env = {**os.environ, "PYTHONDONTWRITEBYTECODE": "1"}
     try:
         proc = subprocess.run(
@@ -141,12 +141,21 @@ def run_exercise(path: Path, timeout: float = 30.0) -> bool:
             env=env,
             stdin=subprocess.DEVNULL,
             capture_output=True,
+            text=True,
             timeout=timeout,
             check=False,
         )
-    except (subprocess.TimeoutExpired, OSError):
-        return False
-    return proc.returncode == 0
+    except subprocess.TimeoutExpired:
+        return False, f"timed out after {timeout:g}s"
+    except OSError as exc:
+        return False, str(exc)
+    lines = [ln for ln in (proc.stdout + proc.stderr).splitlines() if ln.strip()]
+    return proc.returncode == 0, lines[-1] if lines else ""
+
+
+def run_exercise(path: Path, timeout: float = 30.0) -> bool:
+    """Run one exercise file; ``True`` when it exits 0."""
+    return run_exercise_detail(path, timeout)[0]
 
 
 def load_quiz_results(path: Path | None = None) -> dict[str, Any]:
