@@ -97,3 +97,12 @@ def test_badges_unlock_with_progress() -> None:
     ]
     stats = full.stats()
     assert sum(b.unlocked(stats) for b in BADGES) >= len(BADGES) - 2
+
+
+def test_progress_cli_skips_timestamp_only_changes() -> None:
+    from progress import unchanged
+
+    old = {"timestamp": "a", "xp": 10, "modules": [{"number": 1, "done": 1}]}
+    assert unchanged(old, {**old, "timestamp": "b"})
+    assert not unchanged(old, {**old, "xp": 20})
+    assert not unchanged(None, old)

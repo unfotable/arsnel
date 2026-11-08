@@ -54,7 +54,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     run([str(python), "-m", "pip", "install", "--quiet", "--upgrade", "pip"])
     run([str(python), "-m", "pip", "install", "--quiet", "-e", f".[{args.extras}]"])
     run([str(python), "generate.py"])
-    run([str(python), "progress.py", "--no-run"])
+    run([str(python), "progress.py"])
     activate = (
         r".venv\Scripts\activate"
         if sys.platform == "win32"
