@@ -16,14 +16,14 @@ from arsnel.paths import CHARTS
 WHITE = "#ffffff"
 BLACK = "#000000"
 CARBON = "#232323"
-GREEN = "#1f9d45"
+BLUE = "#2a78d6"
 MUTED = "#52514e"
 
 # Validated categorical slots (blue, orange, aqua, yellow, magenta, green).
 SERIES = ("#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4", "#008300")
 
 # Sequential single-hue ramp for the three levels (light -> dark).
-LEVEL_COLORS = {"BEGINNER": "#b8f5c4", "INTERMEDIATE": "#5fd47c", "ADVANCED": "#1f9d45"}
+LEVEL_COLORS = {"BEGINNER": "#cfe3fb", "INTERMEDIATE": "#8ebcf0", "ADVANCED": "#2a78d6"}
 
 MONO = ["DejaVu Sans Mono", "Menlo", "Consolas", "monospace"]
 

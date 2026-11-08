@@ -5,7 +5,7 @@ project. ``build_site.py`` writes these strings to ``site/static/``.
 
 Design rules (see the project brief): white paper with a 24px carbon grid,
 1px borders, no rounded corners, hard ``4px 4px 0`` shadows, Press Start 2P
-headings, VT323 / IBM Plex Mono body, green-on-black terminal cards, a CSS
+headings, VT323 / IBM Plex Mono body, blue-on-black terminal cards, a CSS
 scanline overlay, and dark-mode-ready tokens (light is the default).
 """
 
@@ -26,9 +26,9 @@ CSS = """\
   --muted: #5c5c5c;
   --panel: #ffffff;
   --term-bg: #0b0b0b;
-  --term-fg: #39ff6a;
+  --term-fg: #4da3ff;
   --term-dim: #8a8a8a;
-  --accent: #1f9d45;
+  --accent: #2a78d6;
   --accent-ink: #000000;
   --warn: #eda100;
   --shadow: 4px 4px 0 var(--carbon);
@@ -46,7 +46,7 @@ CSS = """\
   --muted: #a3a3a3;
   --panel: #161616;
   --term-bg: #000000;
-  --accent: #39ff6a;
+  --accent: #4da3ff;
   --accent-ink: #000000;
   --shadow: 4px 4px 0 #000000;
 }
@@ -59,7 +59,7 @@ CSS = """\
     --muted: #a3a3a3;
     --panel: #161616;
     --term-bg: #000000;
-    --accent: #39ff6a;
+    --accent: #4da3ff;
     --shadow: 4px 4px 0 #000000;
   }
 }

@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-11-07T15:33:27.795806</dc:date>
+    <dc:date>2026-11-08T07:57:01.808672</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -616,7 +616,7 @@ L 80.6985 263.252425
 L 80.6985 251.693613 
 L 41.7015 251.693613 
 z
-" style="fill: #b8f5c4; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
+" style="fill: #cfe3fb; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
     </g>
     <!-- terminal -->
     <g transform="translate(43.8615 259.362738) scale(0.072 -0.072)">
@@ -822,7 +822,7 @@ L 72.02925 385.921698
 L 72.02925 374.401698 
 L 50.37075 374.401698 
 z
-" style="fill: #b8f5c4; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
+" style="fill: #cfe3fb; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
     </g>
     <!-- venv -->
     <g transform="translate(52.53075 382.032011) scale(0.072 -0.072)">
@@ -851,7 +851,7 @@ L 144.065812 201.908085
 L 144.065812 190.349273 
 L 100.734187 190.349273 
 z
-" style="fill: #b8f5c4; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
+" style="fill: #cfe3fb; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
     </g>
     <!-- variables -->
     <g transform="translate(102.894187 198.018398) scale(0.072 -0.072)">
@@ -932,7 +932,7 @@ L 135.396562 324.577358
 L 135.396562 313.057358 
 L 109.403437 313.057358 
 z
-" style="fill: #b8f5c4; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
+" style="fill: #cfe3fb; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
     </g>
     <!-- types -->
     <g transform="translate(111.563437 320.687671) scale(0.072 -0.072)">
@@ -996,7 +996,7 @@ L 150.56775 447.266319
 L 150.56775 435.745756 
 L 94.23225 435.745756 
 z
-" style="fill: #b8f5c4; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
+" style="fill: #cfe3fb; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
     </g>
     <!-- input/output -->
     <g transform="translate(96.39225 443.376631) scale(0.072 -0.072)">
@@ -1070,7 +1070,7 @@ L 205.265812 201.888679
 L 205.265812 190.368679 
 L 161.934187 190.368679 
 z
-" style="fill: #b8f5c4; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
+" style="fill: #cfe3fb; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
     </g>
     <!-- operators -->
     <g transform="translate(164.094187 197.998992) scale(0.072 -0.072)">
@@ -1092,7 +1092,7 @@ L 211.76775 324.596765
 L 211.76775 313.037952 
 L 155.43225 313.037952 
 z
-" style="fill: #b8f5c4; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
+" style="fill: #cfe3fb; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
     </g>
     <!-- conditionals -->
     <g transform="translate(157.59225 320.707077) scale(0.072 -0.072)">
@@ -1166,7 +1166,7 @@ L 196.596562 447.285444
 L 196.596562 435.726631 
 L 170.603437 435.726631 
 z
-" style="fill: #b8f5c4; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
+" style="fill: #cfe3fb; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
     </g>
     <!-- loops -->
     <g transform="translate(172.763437 443.395756) scale(0.072 -0.072)">
@@ -1184,7 +1184,7 @@ L 262.131187 263.2333
 L 262.131187 251.712738 
 L 227.468812 251.712738 
 z
-" style="fill: #b8f5c4; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
+" style="fill: #cfe3fb; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
     </g>
     <!-- strings -->
     <g transform="translate(229.628812 259.343613) scale(0.072 -0.072)">
@@ -1241,7 +1241,7 @@ L 266.465812 385.921979
 L 266.465812 374.401417 
 L 223.134187 374.401417 
 z
-" style="fill: #b8f5c4; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
+" style="fill: #cfe3fb; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
     </g>
     <!-- f-strings -->
     <g transform="translate(225.294187 382.032292) scale(0.072 -0.072)">
@@ -1293,7 +1293,7 @@ L 318.996562 140.563746
 L 318.996562 129.004933 
 L 293.003437 129.004933 
 z
-" style="fill: #b8f5c4; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
+" style="fill: #cfe3fb; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
     </g>
     <!-- lists -->
     <g transform="translate(295.163437 136.674058) scale(0.072 -0.072)">
@@ -1311,7 +1311,7 @@ L 318.996562 263.2333
 L 318.996562 251.712738 
 L 293.003437 251.712738 
 z
-" style="fill: #b8f5c4; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
+" style="fill: #cfe3fb; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
     </g>
     <!-- dicts -->
     <g transform="translate(295.163437 259.343613) scale(0.072 -0.072)">
@@ -1329,7 +1329,7 @@ L 316.82925 385.921698
 L 316.82925 374.401698 
 L 295.17075 374.401698 
 z
-" style="fill: #b8f5c4; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
+" style="fill: #cfe3fb; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
     </g>
     <!-- sets -->
     <g transform="translate(297.33075 382.032011) scale(0.072 -0.072)">
@@ -1346,7 +1346,7 @@ L 338.502375 508.610659
 L 338.502375 497.090096 
 L 273.497625 497.090096 
 z
-" style="fill: #b8f5c4; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
+" style="fill: #cfe3fb; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
     </g>
     <!-- comprehensions -->
     <g transform="translate(275.657625 504.720971) scale(0.072 -0.072)">
@@ -1394,7 +1394,7 @@ L 388.865812 201.88896
 L 388.865812 190.368398 
 L 345.534187 190.368398 
 z
-" style="fill: #5fd47c; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
+" style="fill: #8ebcf0; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
     </g>
     <!-- functions -->
     <g transform="translate(347.694187 197.999273) scale(0.072 -0.072)">
@@ -1416,7 +1416,7 @@ L 393.200437 324.57764
 L 393.200437 313.057077 
 L 341.199562 313.057077 
 z
-" style="fill: #5fd47c; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
+" style="fill: #8ebcf0; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
     </g>
     <!-- args/kwargs -->
     <g transform="translate(343.359562 320.687952) scale(0.072 -0.072)">
@@ -1473,7 +1473,7 @@ L 386.6985 447.285444
 L 386.6985 435.726631 
 L 347.7015 435.726631 
 z
-" style="fill: #5fd47c; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
+" style="fill: #8ebcf0; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
     </g>
     <!-- closures -->
     <g transform="translate(349.8615 443.395756) scale(0.072 -0.072)">
@@ -1494,7 +1494,7 @@ L 445.731187 263.252425
 L 445.731187 251.693613 
 L 411.068812 251.693613 
 z
-" style="fill: #5fd47c; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
+" style="fill: #8ebcf0; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
     </g>
     <!-- modules -->
     <g transform="translate(413.228812 259.362738) scale(0.072 -0.072)">
@@ -1514,7 +1514,7 @@ L 447.8985 385.921979
 L 447.8985 374.401417 
 L 408.9015 374.401417 
 z
-" style="fill: #5fd47c; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
+" style="fill: #8ebcf0; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
     </g>
     <!-- packages -->
     <g transform="translate(411.0615 382.032292) scale(0.072 -0.072)">
@@ -1535,7 +1535,7 @@ L 502.596562 201.908085
 L 502.596562 190.349273 
 L 476.603437 190.349273 
 z
-" style="fill: #5fd47c; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
+" style="fill: #8ebcf0; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
     </g>
     <!-- files -->
     <g transform="translate(478.763437 198.018398) scale(0.072 -0.072)">
@@ -1553,7 +1553,7 @@ L 513.433125 324.57764
 L 513.433125 313.057077 
 L 465.766875 313.057077 
 z
-" style="fill: #5fd47c; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
+" style="fill: #8ebcf0; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
     </g>
     <!-- exceptions -->
     <g transform="translate(467.926875 320.687952) scale(0.072 -0.072)">
@@ -1593,7 +1593,7 @@ L 509.0985 447.266319
 L 509.0985 435.745756 
 L 470.1015 435.745756 
 z
-" style="fill: #5fd47c; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
+" style="fill: #8ebcf0; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
     </g>
     <!-- json/csv -->
     <g transform="translate(472.2615 443.376631) scale(0.072 -0.072)">
@@ -1637,7 +1637,7 @@ L 568.131188 140.563746
 L 568.131188 129.004933 
 L 533.468813 129.004933 
 z
-" style="fill: #5fd47c; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
+" style="fill: #8ebcf0; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
     </g>
     <!-- classes -->
     <g transform="translate(535.628812 136.674058) scale(0.072 -0.072)">
@@ -1657,7 +1657,7 @@ L 576.800437 263.2333
 L 576.800437 251.712738 
 L 524.799562 251.712738 
 z
-" style="fill: #5fd47c; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
+" style="fill: #8ebcf0; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
     </g>
     <!-- inheritance -->
     <g transform="translate(526.959562 259.343613) scale(0.072 -0.072)">
@@ -1681,7 +1681,7 @@ L 568.131188 385.921979
 L 568.131188 374.401417 
 L 533.468813 374.401417 
 z
-" style="fill: #5fd47c; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
+" style="fill: #8ebcf0; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
     </g>
     <!-- dunders -->
     <g transform="translate(535.628812 382.032292) scale(0.072 -0.072)">
@@ -1701,7 +1701,7 @@ L 576.800437 508.629784
 L 576.800437 497.070971 
 L 524.799562 497.070971 
 z
-" style="fill: #5fd47c; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
+" style="fill: #8ebcf0; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
     </g>
     <!-- dataclasses -->
     <g transform="translate(526.959562 504.740096) scale(0.072 -0.072)">
@@ -1725,7 +1725,7 @@ L 633.665812 263.2333
 L 633.665812 251.712738 
 L 590.334187 251.712738 
 z
-" style="fill: #5fd47c; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
+" style="fill: #8ebcf0; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
     </g>
     <!-- iterators -->
     <g transform="translate(592.494187 259.343613) scale(0.072 -0.072)">
@@ -1747,7 +1747,7 @@ L 635.833125 385.921698
 L 635.833125 374.401698 
 L 588.166875 374.401698 
 z
-" style="fill: #5fd47c; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
+" style="fill: #8ebcf0; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
     </g>
     <!-- generators -->
     <g transform="translate(590.326875 382.032011) scale(0.072 -0.072)">
@@ -1770,7 +1770,7 @@ L 697.033125 201.88896
 L 697.033125 190.368398 
 L 649.366875 190.368398 
 z
-" style="fill: #5fd47c; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
+" style="fill: #8ebcf0; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
     </g>
     <!-- decorators -->
     <g transform="translate(651.526875 197.999273) scale(0.072 -0.072)">
@@ -1793,7 +1793,7 @@ L 701.36775 324.577358
 L 701.36775 313.057358 
 L 645.03225 313.057358 
 z
-" style="fill: #5fd47c; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
+" style="fill: #8ebcf0; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
     </g>
     <!-- context mgrs -->
     <g transform="translate(647.19225 320.687671) scale(0.072 -0.072)">
@@ -1821,7 +1821,7 @@ L 688.363875 447.266319
 L 688.363875 435.745756 
 L 658.036125 435.745756 
 z
-" style="fill: #5fd47c; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
+" style="fill: #8ebcf0; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
     </g>
     <!-- typing -->
     <g transform="translate(660.196125 443.376631) scale(0.072 -0.072)">
@@ -1840,7 +1840,7 @@ L 747.396562 201.888679
 L 747.396562 190.368679 
 L 721.403437 190.368679 
 z
-" style="fill: #1f9d45; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
+" style="fill: #2a78d6; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
     </g>
     <!-- async -->
     <g transform="translate(723.563437 197.998992) scale(0.072 -0.072)">
@@ -1858,7 +1858,7 @@ L 751.731187 324.57764
 L 751.731187 313.057077 
 L 717.068812 313.057077 
 z
-" style="fill: #1f9d45; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
+" style="fill: #2a78d6; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
     </g>
     <!-- threads -->
     <g transform="translate(719.228812 320.687952) scale(0.072 -0.072)">
@@ -1878,7 +1878,7 @@ L 769.069687 447.285444
 L 769.069687 435.726631 
 L 699.730312 435.726631 
 z
-" style="fill: #1f9d45; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
+" style="fill: #2a78d6; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
     </g>
     <!-- multiprocessing -->
     <g transform="translate(701.890312 443.395756) scale(0.072 -0.072)">
@@ -1906,7 +1906,7 @@ L 810.763875 263.233019
 L 810.763875 251.713019 
 L 780.436125 251.713019 
 z
-" style="fill: #1f9d45; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
+" style="fill: #2a78d6; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
     </g>
     <!-- pytest -->
     <g transform="translate(782.596125 259.343331) scale(0.072 -0.072)">
@@ -1925,7 +1925,7 @@ L 812.931187 385.921979
 L 812.931187 374.401417 
 L 778.268812 374.401417 
 z
-" style="fill: #1f9d45; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
+" style="fill: #2a78d6; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
     </g>
     <!-- mocking -->
     <g transform="translate(780.428812 382.032292) scale(0.072 -0.072)">
@@ -1945,7 +1945,7 @@ L 878.465812 324.57764
 L 878.465812 313.057077 
 L 835.134187 313.057077 
 z
-" style="fill: #1f9d45; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
+" style="fill: #2a78d6; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
     </g>
     <!-- packaging -->
     <g transform="translate(837.294187 320.687952) scale(0.072 -0.072)">
@@ -1967,7 +1967,7 @@ L 939.665812 201.908085
 L 939.665812 190.349273 
 L 896.334187 190.349273 
 z
-" style="fill: #1f9d45; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
+" style="fill: #2a78d6; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
     </g>
     <!-- profiling -->
     <g transform="translate(898.494187 198.018398) scale(0.072 -0.072)">
@@ -1989,7 +1989,7 @@ L 930.996562 324.57764
 L 930.996562 313.057077 
 L 905.003437 313.057077 
 z
-" style="fill: #1f9d45; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
+" style="fill: #2a78d6; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
     </g>
     <!-- big-O -->
     <g transform="translate(907.163437 320.687952) scale(0.072 -0.072)">
@@ -2030,7 +2030,7 @@ L 930.996562 447.266038
 L 930.996562 435.746038 
 L 905.003437 435.746038 
 z
-" style="fill: #1f9d45; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
+" style="fill: #2a78d6; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
     </g>
     <!-- numpy -->
     <g transform="translate(907.163437 443.37635) scale(0.072 -0.072)">
@@ -2048,7 +2048,7 @@ L 994.363875 263.2333
 L 994.363875 251.712738 
 L 964.036125 251.712738 
 z
-" style="fill: #1f9d45; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
+" style="fill: #2a78d6; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
     </g>
     <!-- pandas -->
     <g transform="translate(966.196125 259.343613) scale(0.072 -0.072)">
@@ -2067,7 +2067,7 @@ L 1003.033125 385.941104
 L 1003.033125 374.382292 
 L 955.366875 374.382292 
 z
-" style="fill: #1f9d45; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
+" style="fill: #2a78d6; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
     </g>
     <!-- matplotlib -->
     <g transform="translate(957.526875 382.051417) scale(0.072 -0.072)">
@@ -2090,7 +2090,7 @@ L 1057.731187 263.2333
 L 1057.731187 251.712738 
 L 1023.068812 251.712738 
 z
-" style="fill: #1f9d45; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
+" style="fill: #2a78d6; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
     </g>
     <!-- fastapi -->
     <g transform="translate(1025.228812 259.343613) scale(0.072 -0.072)">
@@ -2110,7 +2110,7 @@ L 1049.061937 385.941104
 L 1049.061937 374.382292 
 L 1031.738062 374.382292 
 z
-" style="fill: #1f9d45; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
+" style="fill: #2a78d6; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
     </g>
     <!-- cli -->
     <g transform="translate(1033.898062 382.051417) scale(0.072 -0.072)">
@@ -2126,7 +2126,7 @@ L 1118.931187 263.252425
 L 1118.931187 251.693613 
 L 1084.268812 251.693613 
 z
-" style="fill: #1f9d45; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
+" style="fill: #2a78d6; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
     </g>
     <!-- logging -->
     <g transform="translate(1086.428812 259.362738) scale(0.072 -0.072)">
@@ -2146,7 +2146,7 @@ L 1123.265812 385.941104
 L 1123.265812 374.382292 
 L 1079.934187 374.382292 
 z
-" style="fill: #1f9d45; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
+" style="fill: #2a78d6; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
     </g>
     <!-- lint + CI -->
     <g transform="translate(1082.094187 382.051417) scale(0.072 -0.072)">
@@ -2221,7 +2221,7 @@ L 1182.2985 324.577358
 L 1182.2985 313.057358 
 L 1143.3015 313.057358 
 z
-" style="fill: #1f9d45; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
+" style="fill: #2a78d6; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter"/>
     </g>
     <!-- capstone -->
     <g transform="translate(1145.4615 320.687671) scale(0.072 -0.072)">
@@ -2657,7 +2657,7 @@ L 35.44 86.76125
 L 35.44 81.16125 
 L 19.44 81.16125 
 z
-" style="fill: #b8f5c4; stroke: #000000; stroke-linejoin: miter"/>
+" style="fill: #cfe3fb; stroke: #000000; stroke-linejoin: miter"/>
     </g>
     <g id="text_67">
      <!-- BEGINNER -->
@@ -2793,7 +2793,7 @@ L 112.37 86.76125
 L 112.37 81.16125 
 L 96.37 81.16125 
 z
-" style="fill: #5fd47c; stroke: #000000; stroke-linejoin: miter"/>
+" style="fill: #8ebcf0; stroke: #000000; stroke-linejoin: miter"/>
     </g>
     <g id="text_68">
      <!-- INTERMEDIATE -->
@@ -2882,7 +2882,7 @@ L 208.565 86.76125
 L 208.565 81.16125 
 L 192.565 81.16125 
 z
-" style="fill: #1f9d45; stroke: #000000; stroke-linejoin: miter"/>
+" style="fill: #2a78d6; stroke: #000000; stroke-linejoin: miter"/>
     </g>
     <g id="text_69">
      <!-- ADVANCED -->

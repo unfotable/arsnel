@@ -14,8 +14,8 @@ import matplotlib.pyplot as plt
 from arsnel.badges import RANKS
 from arsnel.chartstyle import (
     BLACK,
+    BLUE,
     CARBON,
-    GREEN,
     MUTED,
     apply_style,
     save,
@@ -46,9 +46,9 @@ def main(
     if points:
         times = [datetime.fromisoformat(str(p["t"])) for p in points]
         percents = [float(str(p["percent"])) for p in points]
-        ax.step(times, percents, where="post", color=GREEN, lw=3)
+        ax.step(times, percents, where="post", color=BLUE, lw=3)
         ax.scatter(
-            times, percents, marker="s", s=70, color=GREEN, edgecolor=BLACK, zorder=5
+            times, percents, marker="s", s=70, color=BLUE, edgecolor=BLACK, zorder=5
         )
         if len(points) == 1:
             ax.annotate(

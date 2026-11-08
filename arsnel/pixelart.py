@@ -13,7 +13,8 @@ WHITE = "#ffffff"
 BLACK = "#000000"
 CARBON = "#232323"
 TERMINAL = "#0b0b0b"
-GREEN = "#39ff6a"
+BLUE = "#4da3ff"  # text and mascot on the black terminal
+FILL = "#2a78d6"  # filled XP cells on white paper
 DIM = "#8a8a8a"
 EMPTY = "#e6e6e6"
 EDGE = "#bdbdbd"
@@ -51,7 +52,7 @@ def text_svg(text: str, x: int, y: int, scale: int, fill: str) -> str:
     return _rects(text_bitmap(text), x, y, scale, fill)
 
 
-def mascot_svg(x: int, y: int, scale: int, body: str = GREEN) -> str:
+def mascot_svg(x: int, y: int, scale: int, body: str = BLUE) -> str:
     """Draw the snake mascot (eyes are cut-outs, tongue is white)."""
     body_rows = [row.replace("o", ".").replace("~", ".") for row in MASCOT]
     tongue_rows = ["".join("#" if c == "~" else "." for c in row) for row in MASCOT]
@@ -87,16 +88,16 @@ def banner_svg() -> str:
             f'<rect x="{40 + i * 22}" y="34" width="12" height="12" fill="{WHITE}"/>'
         )
     parts.append(text_svg("ARSNEL@PIXEL:~$ PYTHON", 128, 34, 2, DIM))
-    parts.append(text_svg(">", 56, 84, 12, GREEN))
-    parts.append(text_svg("ARSNEL", 136, 84, 12, GREEN))
+    parts.append(text_svg(">", 56, 84, 12, BLUE))
+    parts.append(text_svg("ARSNEL", 136, 84, 12, BLUE))
     parts.append(
         text_svg("LEARN PYTHON. FROM PRINT() TO PRODUCTION.", 56, 208, 3, WHITE)
     )
-    parts.append(text_svg("ONE PIXEL AT A TIME.", 56, 244, 3, GREEN))
+    parts.append(text_svg("ONE PIXEL AT A TIME.", 56, 244, 3, BLUE))
     cursor_x = 56 + text_width("ONE PIXEL AT A TIME.") * 3 + 18
     parts.append(
         f'<rect x="{cursor_x}" y="244" width="15" height="{GLYPH_H * 3}" '
-        f'fill="{GREEN}">'
+        f'fill="{BLUE}">'
         '<animate attributeName="opacity" values="1;1;0;0" dur="1s" '
         'repeatCount="indefinite"/></rect>'
     )
@@ -126,7 +127,7 @@ def xp_bar_svg(percent: float, xp: int, max_xp: int, level: int, rank: str) -> s
         on = i < filled
         parts.append(
             f'<rect x="{x}" y="74" width="{cell_w}" height="30" '
-            f'fill="{GREEN if on else EMPTY}" '
+            f'fill="{FILL if on else EMPTY}" '
             f'stroke="{BLACK if on else EDGE}" stroke-width="1"/>'
         )
     parts.append("</svg>")

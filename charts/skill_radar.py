@@ -12,7 +12,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import matplotlib.pyplot as plt
 import numpy as np
 
-from arsnel.chartstyle import CARBON, GREEN, MUTED, apply_style, save, terminal_title
+from arsnel.chartstyle import BLUE, CARBON, MUTED, apply_style, save, terminal_title
 from arsnel.manifest import SKILLS, get_module
 from arsnel.paths import CHARTS, PROGRESS_FILE
 
@@ -43,10 +43,10 @@ def main(out_dir: Path = CHARTS, snapshot: dict[str, Any] | None = None) -> list
     ax.set_theta_offset(np.pi / 2)
     ax.set_theta_direction(-1)
     ax.plot(closed_angles, [100] * len(closed_angles), color=CARBON, lw=1.5, ls="--")
-    ax.plot(closed_angles, closed_values, color=GREEN, lw=3)
-    ax.fill(closed_angles, closed_values, color=GREEN, alpha=0.35)
+    ax.plot(closed_angles, closed_values, color=BLUE, lw=3)
+    ax.fill(closed_angles, closed_values, color=BLUE, alpha=0.35)
     ax.scatter(
-        angles, values, marker="s", s=60, color=GREEN, edgecolor="black", zorder=5
+        angles, values, marker="s", s=60, color=BLUE, edgecolor="black", zorder=5
     )
     ax.set_xticks(angles)
     ax.set_xticklabels(SKILLS, fontsize=9)

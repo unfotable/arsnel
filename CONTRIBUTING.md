@@ -76,7 +76,7 @@ YAML, `.gitignore`, `LICENSE`. Put CSS/JS/HTML inside Python strings (see `arsne
 
 White background, black text, carbon `#232323` 24px grid, Press Start 2P headings,
 VT323 / IBM Plex Mono body, 1px borders, **no rounded corners**, hard shadows
-`4px 4px 0 #232323`, green-on-black terminal cards, scanline overlay, dark-mode tokens.
+`4px 4px 0 #232323`, blue-on-black terminal cards, scanline overlay, dark-mode tokens.
 Charts use `arsnel/chartstyle.py` (validated palette, direct labels + legend).
 
 ## Pull requests
