@@ -53,3 +53,25 @@ def test_svgs_are_valid_xml() -> None:
 def test_badge_grid_locked_state() -> None:
     grid = badge_grid(Snapshot(timestamp="t").stats())
     assert grid.count("LOCKED") == len(BADGES)
+
+
+def test_every_badge_is_a_clean_rectangle() -> None:
+    """Locked and unlocked badges must have equal-width rows (README alignment)."""
+    from arsnel.badges import badge_art
+
+    for badge in BADGES:
+        for unlocked in (False, True):
+            lines = badge_art(badge, unlocked)
+            assert len({len(line) for line in lines}) == 1, (badge.name, unlocked)
+            assert len(lines) == 11
+
+
+def test_badge_grid_rows_align() -> None:
+    from arsnel.progress_core import ModuleProgress
+
+    snap = Snapshot(timestamp="t")
+    snap.modules = [ModuleProgress(n, 3, 3, 100.0, True) for n in range(19)]
+    for stats in (Snapshot(timestamp="t").stats(), snap.stats()):
+        for block in badge_grid(stats).split("\n\n"):
+            art_rows = block.splitlines()[:-1]  # the last line holds the labels
+            assert {len(row) for row in art_rows} == {62}

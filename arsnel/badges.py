@@ -129,7 +129,7 @@ def badge_art(badge: Badge, unlocked: bool) -> list[str]:
     lines = [border * 7]
     for y in range(-1, 8):
         inner = (
-            "  "
+            "  " * 5  # blank padding row, as wide as a 5-column glyph
             if y in (-1, 7)
             else "".join(fill if c == "#" else "  " for c in rows[y])
         )
