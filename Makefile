@@ -1,7 +1,7 @@
 # ARSNEL - tiny task runner. Everything real lives in Python scripts.
 PY ?= python
 
-.PHONY: setup generate lint fmt test check charts progress readme site quiz clean
+.PHONY: setup generate lint fmt test check charts progress readme site serve quiz clean
 
 setup:
 	$(PY) bootstrap.py
@@ -23,6 +23,8 @@ readme:
 	$(PY) build_readme.py
 site:
 	$(PY) build_site.py
+serve:
+	$(PY) -m arsnel serve
 quiz:
 	cd curriculum/module_01_syntax && $(PY) quiz.py
 clean:

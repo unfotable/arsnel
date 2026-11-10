@@ -5,6 +5,7 @@
     python -m arsnel check [N]    grade the exercises of module N (default: all)
     python -m arsnel quiz N       take the quiz for module N
     python -m arsnel modules      progress per module
+    python -m arsnel serve        build the website and serve it on localhost:8000
     python -m arsnel status       XP, rank and totals
 
 After ``pip install -e .`` the same commands work as ``arsnel next`` etc.
@@ -13,13 +14,17 @@ After ``pip install -e .`` the same commands work as ``arsnel next`` etc.
 from __future__ import annotations
 
 import argparse
+import functools
+import sys
+import webbrowser
 from collections.abc import Sequence
+from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
 from arsnel import NAME, TAGLINE
 from arsnel.ascii_art import xp_bar
 from arsnel.manifest import MODULES, get_module
-from arsnel.paths import CURRICULUM, ROOT
+from arsnel.paths import CURRICULUM, ROOT, SITE
 from arsnel.progress_core import (
     QUIZ_PASS,
     XP_EXERCISE,
@@ -29,7 +34,7 @@ from arsnel.progress_core import (
     scan,
 )
 
-COMMANDS = "status  modules  next  check [N]  quiz N"
+COMMANDS = "status  modules  next  check [N]  quiz N  serve"
 
 
 def _rel(path: Path) -> str:
@@ -143,9 +148,45 @@ def cmd_quiz(number: int) -> int:
     return run_quiz(get_module(number), content.quiz)
 
 
+def make_server(
+    directory: Path, port: int = 8000, host: str = "127.0.0.1"
+) -> ThreadingHTTPServer:
+    """An HTTP server that serves ``directory`` (use port 0 for any free port)."""
+    handler = functools.partial(SimpleHTTPRequestHandler, directory=str(directory))
+    return ThreadingHTTPServer((host, port), handler)
+
+
+def cmd_serve(port: int, host: str, build: bool, open_browser: bool) -> int:
+    """Build the website (unless told not to) and serve it locally."""
+    if build or not (SITE / "index.html").exists():
+        sys.path.insert(0, str(ROOT))  # build_site.py lives next to the package
+        import build_site
+
+        print("building the ARSNEL site ...")
+        build_site.build(SITE)
+    try:
+        server = make_server(SITE, port, host)
+    except OSError as exc:
+        print(f"cannot listen on {host}:{port} ({exc.strerror}); try --port {port + 1}")
+        return 1
+    url = f"http://localhost:{server.server_address[1]}"
+    print(f"{NAME} is running at {url}   (Ctrl+C to stop)")
+    if open_browser:
+        webbrowser.open(url)
+    try:
+        server.serve_forever()
+    except KeyboardInterrupt:
+        print("\nstopped")
+    finally:
+        server.server_close()
+    return 0
+
+
 def main(argv: Sequence[str] | None = None, curriculum: Path = CURRICULUM) -> int:
     """CLI entry point."""
-    parser = argparse.ArgumentParser(prog="arsnel", description=TAGLINE)
+    parser = argparse.ArgumentParser(
+        prog="arsnel", description=TAGLINE.replace("`", "")
+    )
     sub = parser.add_subparsers(dest="command")
     sub.add_parser("status", help="XP, rank and totals")
     sub.add_parser("modules", help="progress per module")
@@ -156,6 +197,13 @@ def main(argv: Sequence[str] | None = None, curriculum: Path = CURRICULUM) -> in
     )
     quiz = sub.add_parser("quiz", help="take a module quiz")
     quiz.add_argument("module", type=int, help="module number")
+    serve = sub.add_parser("serve", help="build and serve the website locally")
+    serve.add_argument("--port", type=int, default=8000, help="default: 8000")
+    serve.add_argument("--host", default="127.0.0.1", help="default: 127.0.0.1")
+    serve.add_argument(
+        "--no-build", action="store_true", help="serve the existing site/ folder"
+    )
+    serve.add_argument("--open", action="store_true", help="open a browser tab")
     args = parser.parse_args(argv)
 
     if args.command == "status":
@@ -168,6 +216,8 @@ def main(argv: Sequence[str] | None = None, curriculum: Path = CURRICULUM) -> in
         return cmd_check(curriculum, args.module)
     if args.command == "quiz":
         return cmd_quiz(args.module)
+    if args.command == "serve":
+        return cmd_serve(args.port, args.host, not args.no_build, args.open)
     print(f"{NAME}: {TAGLINE.replace('`', '')}\n")
     print(f"commands: {COMMANDS}\n")
     return cmd_next(curriculum)

@@ -99,3 +99,37 @@ def test_quiz_aborts_cleanly_without_input(
 ) -> None:
     monkeypatch.setattr("sys.stdin", io.StringIO(""))  # input() hits EOF
     assert cli.main(["quiz", "1"]) == 2
+
+
+def test_serve_serves_a_directory(tmp_path: Path) -> None:
+    import threading
+    import urllib.request
+
+    (tmp_path / "index.html").write_text("<title>ARSNEL</title>")
+    server = cli.make_server(tmp_path, port=0)
+    thread = threading.Thread(target=server.serve_forever, daemon=True)
+    thread.start()
+    try:
+        port = server.server_address[1]
+        with urllib.request.urlopen(f"http://127.0.0.1:{port}/") as response:
+            assert response.status == 200
+            assert b"ARSNEL" in response.read()
+    finally:
+        server.shutdown()
+        server.server_close()
+
+
+def test_serve_reports_a_busy_port(
+    tmp_path: Path,
+    monkeypatch: pytest.MonkeyPatch,
+    capsys: pytest.CaptureFixture[str],
+) -> None:
+    (tmp_path / "index.html").write_text("x")
+    monkeypatch.setattr(cli, "SITE", tmp_path)  # never rebuild the real site here
+    busy = cli.make_server(tmp_path, port=0)
+    try:
+        port = busy.server_address[1]
+        assert cli.cmd_serve(port, "127.0.0.1", build=False, open_browser=False) == 1
+        assert f"try --port {port + 1}" in capsys.readouterr().out
+    finally:
+        busy.server_close()

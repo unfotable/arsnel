@@ -140,8 +140,20 @@ def render(snapshot: Snapshot) -> str:
         "[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)]"
         "(https://codespaces.new/unfotable/arsnel)",
         "",
-        "No install needed: Codespaces opens ARSNEL in your browser with Python and "
-        "every dependency ready. Or set it up locally:",
+        "Quick install - the whole site and terminal demo on your machine in four lines:",
+        "",
+        "```bash",
+        "git clone https://github.com/unfotable/arsnel.git",
+        "cd arsnel",
+        "python -m pip install -e .",
+        "python -m arsnel serve           # serves http://localhost:8000",
+        "```",
+        "",
+        "Add `--port 9000` to change the port, `--open` to launch your browser, or "
+        "`--no-build` to serve the last build. Prefer the cloud? Codespaces opens "
+        "ARSNEL in your browser with everything ready (badge above).",
+        "",
+        "Full learner setup (virtualenv, all extras, exercises and quizzes):",
         "",
         "```bash",
         "git clone https://github.com/unfotable/arsnel && cd arsnel",
